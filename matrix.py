@@ -1,5 +1,16 @@
 import math
 
+def push(matrix_list):
+    temp = new_matrix()
+    for i in range(4):
+        for j in range(4):
+            temp[i][j] = matrix_list[-1][i][j]
+    matrix_list.append(temp)
+
+        
+def pop(matrix_list):
+    matrix_list.pop(len(matrix_list) - 1)
+
 def make_bezier():
     b = new_matrix()
     ident(b)
